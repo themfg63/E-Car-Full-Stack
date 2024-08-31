@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Giriş Yap</title>
 </head>
 <body>
-<section>
-    <div class="container mt-5 p-5">
-        <div class="row">
-            <div class="col-md-6 p-5">
-                <img alt="" src="img/logo.jpg" width="100%" height="400px">
-            </div>
-            <div class="col-md-6 p-5">
-                <div class="card" style="background-color: #ffc107;">
-                    <div class="card-header text-danger">
-                        <p class="fs-4 text-center fw-bold">Giriş Yap</p>
-                    </div>
-                    <div class="card-body" style="background-color: #ffc107;">
-                        <form action="/login" method="post">
-                            <div class="mb-3 text-danger fw-bold">
-                                <label class="form-label">Kullanıcı Adı veya Email</label>
-                                <input class="form-control" name="username" type="email" required>
-                            </div>
-                            <div class="mb-3 text-danger fw-bold">
-                                <label class="form-label">Şifre</label>
-                                <input class="form-control" name="password" type="password" required>
-                            </div>
-                            <button type="submit" class="btn bg-danger text-warning col-md-12 fw-bold">Giriş Yap</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="login-box">
+    <div class="login-header">
+        <header>Giriş Yap</header>
     </div>
-</section>
+    <div class="input-box">
+        <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+    </div>
+    <div class="input-box">
+        <input type="password" class="input-field" placeholder="Şifre" autocomplete="off" required>
+    </div>
+    <div class="forgot">
+        <section>
+            <input type="checkbox" id="check">
+            <label for="check">Beni Hatırla</label>
+        </section>
+        <section>
+            <a href="#">Şifremi Unuttum</a>
+        </section>
+    </div>
+    <div class="input-submit">
+        <button class="submit-btn" id="submit"></button>
+        <label for="submit">Giriş Yap</label>
+    </div>
+    <div class="sign-up-link">
+        <p>Hesabınız Yok Mu? <a href="#">Kayıt Ol</a> </p>
+    </div>
+</div>
 </body>
 </html>
